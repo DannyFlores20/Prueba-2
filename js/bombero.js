@@ -1,10 +1,9 @@
 class Bombero{
-    constructor(nombre,habilidades){
-        this.nombre = nombre;
-        this.habilidades = habilidades;
+    constructor(nombre){
+        this.nombre=nombre;
     }
-    addHabilidades(){
-        let habilidad = new Array();
-        habilidad.push();
+    addHabilidad(){
+        let habilidades=[];
+        habilidades.push(this.nombre)
     }
 }

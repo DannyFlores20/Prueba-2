@@ -1,26 +1,35 @@
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Prueba 2</title>
-    <script src="js/motobomba.js"></script>
-    <script src="js/bombero.js"></script>
-</head>
-<body style="background-color:#FF0000;">
-
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> Prueba 2</title>
+ <script src="js/motobomba.js"></script>
+<script src="js/bombero.js"></script>
+    </head>
     
-    <div align= "center">
-        <label>Id:</label>
-        <input type="text" id="id">
-        <label>Capacidad:</label>
-        <input type="text"  id="capacidad">
-        <br><br>
-        <label id="demo"></label>
-        <div id="img" align="rigth"></div>
-        <section id="caja" style="background: green;width: 25px; height: 25px;"></section>
-        <br><br><br>
-        <button type="button" id="demo" onclick="prueba.funcionProbar()">crear</button>
-    </div>
-</body>
-</html>
+    <body>
+        <div>
+            <label class="id">Id</label>
+            <input type="number" id="id">
+            <label class="capacidad">Capacidad</label>
+            <input type="number" id="capacidad" >
+            <button type="button" class="button" onclick="o.funcionValidar()">Crear</button>
+        </div>
+        <br>
+        <div id="img">
+    
+        </div>
+        <br>
+        <div id="estado">
+    
+        </div>
+        <br>
+        <div id="pintar">
+        </div>
+    </body>
+    
+    </html>

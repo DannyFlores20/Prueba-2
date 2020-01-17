@@ -1,57 +1,49 @@
-class Motobomba{
-    constructor(id,capacidad,estado=false){
+class Motobomba {
+    constructor(id, capacidad, estado = false) {
         this.id = id;
         this.capacidad = capacidad;
         this.estado = estado;
     }
-    prender(){
-        return this.estado = true;
+    prender() {
+        this.estado = true;
     }
-    apagar(){
-        return this.estado = false;
+    apagar() {
+        this.estado = false;
     }
-    getEstado(){
+    getEstado() {
         return this.estado;
     }
-    toString(){
-        if(this.estado == true){
-            return "la motobomba con id " + this.id + " esta encendida"
-        }else{
-            return "la motobomba con id " + this.id + " esta apagada"
+    toString() {
+        if (this.estado == true) {
+            document.getElementById('estado').innerHTML='<img src="img/verde.jpg" windth="130px" height="100px">'
+            var parrafo=document.createElement('li')
+            parrafo.innerHTML = 'Esta Prendido'
+            document.body.appendChild(parrafo)
+            o.apagar()
+            document.getElementById("boton").innerHTML="esta prendido"
+            
+        }
+        else if(this.estado == false) {
+            document.getElementById('estado').innerHTML='<img src="img/rojo.jpg" windth="130px" height="100px">'
+            var parrafo=document.createElement('li')
+            parrafo.innerHTML = 'Esta Apagado'
+            document.body.appendChild(parrafo)
+            o.prender()
+            document.getElementById("boton").innerHTML="Se encuentra apagado"
         }
     }
-    funcionProbar(){
-        let prueba = document.getElementById("id").value;
-        let cap = document.getElementById("capacidad").value;
-        this.id = prueba;
-        this.capacidad = cap;
+    funcionValidar(){
+        var recu= document.getElementById('id').value;
+        var recu1=document.getElementById('capacidad').value;
+        this.id=recu
+        this.capacidad=recu1
         console.log(this.id)
         console.log(this.capacidad)
-        document.getElementById("demo").innerHTML = 'el ID es:  '+prueba+' '+'Capacidad es:  '+cap;
-        document.getElementById("img").innerHTML = ('<img src="img/moto.jpg"/>');
-        
-        let boton = document.createElement("button");
-        boton.innerHTML = "boton";
-        document.body.appendChild(boton);
-
-        boton.onclick = function() {
-            if(this.estado == true){
-                return boton.innerHTML='encendido';
-            }else{
-                return boton.innerHTML='apagado';
-            }
-        }
-        
+        document.getElementById('img').innerHTML='<img src="img/carrobomba.jpg" windth="130px" height="100px">'
+        document.getElementById('pintar').innerHTML='<button type="button" id="boton" onclick="o.toString()">ESTADO</button>'
     }
-    ocultar(){
-        if(this.estado == true){
-            document.getElementById('cuadro').style.display = 'none';
-        }else{
-            document.getElementById('cuadro').style.display = 'block';
-        }
-    }
-
 }
 
-let prueba = new Motobomba(14,18,false);
-console.log(prueba.toString());
+
+
+let o = new Motobomba()
