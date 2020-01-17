@@ -27,7 +27,7 @@ class Motobomba{
         this.capacidad = cap;
         console.log(this.id)
         console.log(this.capacidad)
-        document.getElementById("demo").innerHTML = 'el ID es:  '+prueba+' '+'Capacidad es:  '+cap;
+        document.getElementById("demo").innerHTML = 'El Id es de:  '+prueba+' '+' La Capacidad es de:  '+cap;
         document.getElementById("img").innerHTML = ('<img src="img/moto.jpg"/>');
         
         let boton = document.createElement("button");
